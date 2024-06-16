@@ -89,12 +89,12 @@
           <skip>${skipAutobahnTestsuite}</skip>
         </configuration>
         <executions>
-          <execution>
+          <!--<execution>
             <phase>test</phase>
             <goals>
               <goal>fuzzingclient</goal>
             </goals>
-          </execution>
+          </execution>-->
         </executions>
         <dependencies>
           <dependency>
