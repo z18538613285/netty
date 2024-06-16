@@ -14,37 +14,37 @@
  * under the License.
  */
 package io.netty.handler.codec;
-
-import io.netty.handler.codec.http.HttpHeaderDateFormat;
-import org.openjdk.jmh.annotations.Benchmark;
-import org.openjdk.jmh.annotations.OutputTimeUnit;
-
-import java.util.Date;
-import java.util.concurrent.TimeUnit;
-
-@OutputTimeUnit(TimeUnit.SECONDS)
-public class DateFormatterBenchmark {
-
-    private static final String DATE_STRING = "Sun, 27 Nov 2016 19:18:46 GMT";
-    private static final Date DATE = new Date(784111777000L);
-
-    @Benchmark
-    public Date parseHttpHeaderDateFormatter() {
-        return DateFormatter.parseHttpDate(DATE_STRING);
-    }
-
-    @Benchmark
-    public Date parseHttpHeaderDateFormat() throws Exception {
-        return HttpHeaderDateFormat.get().parse(DATE_STRING);
-    }
-
-    @Benchmark
-    public String formatHttpHeaderDateFormatter() {
-        return DateFormatter.format(DATE);
-    }
-
-    @Benchmark
-    public String formatHttpHeaderDateFormat() throws Exception {
-        return HttpHeaderDateFormat.get().format(DATE);
-    }
-}
+//
+//import io.netty.handler.codec.http.HttpHeaderDateFormat;
+//import org.openjdk.jmh.annotations.Benchmark;
+//import org.openjdk.jmh.annotations.OutputTimeUnit;
+//
+//import java.util.Date;
+//import java.util.concurrent.TimeUnit;
+//
+//@OutputTimeUnit(TimeUnit.SECONDS)
+//public class DateFormatterBenchmark {
+//
+//    private static final String DATE_STRING = "Sun, 27 Nov 2016 19:18:46 GMT";
+//    private static final Date DATE = new Date(784111777000L);
+//
+//    @Benchmark
+//    public Date parseHttpHeaderDateFormatter() {
+//        return DateFormatter.parseHttpDate(DATE_STRING);
+//    }
+//
+//    @Benchmark
+//    public Date parseHttpHeaderDateFormat() throws Exception {
+//        return HttpHeaderDateFormat.get().parse(DATE_STRING);
+//    }
+//
+//    @Benchmark
+//    public String formatHttpHeaderDateFormatter() {
+//        return DateFormatter.format(DATE);
+//    }
+//
+//    @Benchmark
+//    public String formatHttpHeaderDateFormat() throws Exception {
+//        return HttpHeaderDateFormat.get().format(DATE);
+//    }
+//}

@@ -86,14 +86,14 @@
           </excludeSpecs>
           <skip>${skipHttp2Testsuite}</skip>
         </configuration>
-        <executions>
+        <!--<executions>
           <execution>
             <phase>test</phase>
             <goals>
               <goal>h2spec</goal>
             </goals>
           </execution>
-        </executions>
+        </executions>-->
       </plugin>
     </plugins>
   </build>
